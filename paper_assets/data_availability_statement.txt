@@ -4,6 +4,9 @@ The code, configuration files, summary results, and figure-generation scripts us
 
 https://github.com/rudhresh1997/glitch-tabular-prd
 
-An archived release with a permanent DOI will be provided via Zenodo.
+The dataset used in this work is publicly available from Zenodo:
+https://doi.org/10.5281/zenodo.5649212
 
-The repository includes model implementations, hyperparameter-tuning workflows, evaluation scripts, interpretability analyses, and scripts used to generate the main figures in the paper. Local cleaned datasets used in this work are documented in the repository structure and data notes.
+An archived version of the repository will be provided via Zenodo with a permanent DOI.
+
+The repository includes model implementations, hyperparameter-tuning workflows, evaluation scripts, interpretability analyses, and scripts used to generate the main figures in the paper.

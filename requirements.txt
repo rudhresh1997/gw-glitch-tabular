@@ -1,0 +1,16 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+scipy
+optuna
+xgboost
+shap
+torch
+torchvision
+captum
+pytorch-tabular
+jupyter
+notebook
+pyyaml

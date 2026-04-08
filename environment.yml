@@ -1,0 +1,23 @@
+name: glitch-tabular-prd
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - scipy
+  - jupyter
+  - notebook
+  - pyyaml
+  - pip
+  - pip:
+      - optuna
+      - xgboost
+      - shap
+      - torch
+      - torchvision
+      - captum
+      - pytorch-tabular

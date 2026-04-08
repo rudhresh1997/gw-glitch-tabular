@@ -23,6 +23,13 @@ This repository contains code, configurations, summary results, interpretability
 
 ## Dataset
 
+The dataset used in this work was obtained from:
+
+Gravity Spy Dataset (O3):
+https://doi.org/10.5281/zenodo.5649212
+
+The repository does not include the raw dataset due to size and redistribution considerations. Users should download the dataset from the above source and place it in the appropriate directory as described in the documentation.
+
 Two cleaned datasets are used locally during the workflow:
 
 - `original_data_cleaned.csv`: full dataset with 500,000 samples
@@ -79,3 +86,9 @@ The `v2` scripts generally correspond to improved working variants, while the ea
 ## Repository status
 
 This repository is being prepared as the public companion repository for paper reproducibility and DOI archiving.
+
+## Citation
+
+If you use this repository, please cite the GitHub repository and the Zenodo archived release once the DOI is available.
+
+Citation metadata is provided in `CITATION.cff`.
