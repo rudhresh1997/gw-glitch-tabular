@@ -24,3 +24,6 @@ keywords:
   - deep learning
   - tabular data
   - interpretability
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19475319

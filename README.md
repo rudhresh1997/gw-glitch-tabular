@@ -4,6 +4,8 @@ Code and reproducibility package for the paper:
 
 **Evaluating Deep Learning Models for Multiclass Classification of LIGO Gravitational Wave Glitches**
 
+Zenodo DOI: https://doi.org/10.5281/zenodo.19475319
+
 ## Overview
 
 This repository contains code, configurations, summary results, interpretability analyses, and figure-generation assets for benchmarking classical and deep learning models on tabular glitch metadata.
