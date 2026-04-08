@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -N danet
+#PBS -o danet_output_$PBS_JOBID.log
+#PBS -e danet_error_$PBS_JOBID.log
+#PBS -l ngpus=1
+
+#PBS -q gpu
+#PBS -M rudhresh_manoharan1@baylor.edu
+#PBS -m abe
+
+# Load the correct Conda version
+export PATH=/home/manoharanr/miniconda3/bin:$PATH
+
+# Activate your Conda environment
+source activate env1
+
+# Change to job submission directory
+cd /home/manoharanr/glitch/danet
+
+# Run the Python script
+python3 danet.py

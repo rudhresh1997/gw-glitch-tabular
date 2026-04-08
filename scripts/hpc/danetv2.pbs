@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -N danetv2
+#PBS -o danet_output.log
+#PBS -e danet_error.log
+#PBS -l ngpus=1
+
+#PBS -q gpu
+#PBS -M rudhresh_manoharan1@baylor.edu
+#PBS -m abe
+
+# Load the correct Conda version
+export PATH=/home/manoharanr/miniconda3/bin:$PATH
+
+# Activate your Conda environment
+source activate env1
+
+# Change to job submission directory
+cd /home/manoharanr/glitch/danetv2
+
+# Run the Python script
+python3 danetv2.py

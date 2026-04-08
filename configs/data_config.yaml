@@ -1,0 +1,21 @@
+project_name: glitch-tabular-prd
+
+data:
+  full_dataset_path: data/processed/original_data_cleaned.csv
+  sampled_dataset_path: data/processed/sampled_data_cleaned.csv
+  target_column: ml_label
+  n_features: 9
+
+split:
+  train_fraction: 0.64
+  val_fraction: 0.16
+  test_fraction: 0.20
+  stratified: true
+
+tuning:
+  cv_folds: 5
+  n_trials: 100
+  optimization_metric: weighted_f1
+
+final_training:
+  n_seeds: 15

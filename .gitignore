@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Virtual environments
+venv/
+.env/
+.conda/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Model files
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# Exclude local datasets
+data/raw/*
+data/processed/*
+!data/raw/README.md
+!data/processed/README.md
+
+# Keep split definitions if lightweight
+# data/splits/*
+
+# Result caches
+results/**/checkpoints/*
+results/tmp/
+results/cache/

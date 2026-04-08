@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -N xgboost_gpu
+#PBS -o xgboost_output_$PBS_JOBID.log
+#PBS -e xgboost_error_$PBS_JOBID.log
+#PBS -l ngpus=1
+
+#PBS -q gpu
+#PBS -M rudhresh_manoharan1@baylor.edu
+#PBS -m abe
+
+# Load the correct Conda version
+export PATH=/home/manoharanr/anaconda3/bin:$PATH
+
+# Activate your Conda environment
+source activate env1
+
+# Change to job submission directory
+cd /home/manoharanr/glitch/xgboost
+
+# Run the Python script
+python3 xgboost_gpu.py
