@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it using the metadata below."
-title: "glitch-tabular-prd"
+title: "gw-glitch-tabular"
 type: software
 authors:
   - family-names: "Manoharan"
     given-names: "Rudhresh"
     email: "manorudhresh@gmail.com"
-repository-code: "https://github.com/rudhresh1997/glitch-tabular-prd"
-url: "https://github.com/rudhresh1997/glitch-tabular-prd"
+repository-code: "https://github.com/rudhresh1997/gw-glitch-tabular"
+url: "https://github.com/rudhresh1997/gw-glitch-tabular"
 abstract: >
   Code and reproducibility package for the paper
   "Evaluating Deep Learning Models for Multiclass Classification of LIGO

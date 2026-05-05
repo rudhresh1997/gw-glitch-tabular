@@ -1,4 +1,4 @@
-project_name: glitch-tabular-prd
+project_name: gw-glitch-tabular
 
 data:
   full_dataset_path: data/processed/original_data_cleaned.csv

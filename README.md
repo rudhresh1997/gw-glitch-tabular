@@ -1,4 +1,4 @@
-# glitch-tabular-prd
+# gw-glitch-tabular
 
 Code and reproducibility package for the paper:
 
