@@ -6,8 +6,12 @@ evidence used for the 2026 referee-driven revision of:
 > Evaluating Machine-Learning Models for Multiclass Classification of
 > LIGO Gravitational-Wave Glitches
 
-The revised manuscript was submitted to *Journal of Physics
-Communications*. This repository does not assert a publication decision.
+The manuscript has been accepted for publication in *Journal of Physics
+Communications* and assigned the following article DOI:
+
+https://doi.org/10.1088/2399-6528/aeb8df
+
+The final Version of Record may not yet be available.
 
 ## Scope
 

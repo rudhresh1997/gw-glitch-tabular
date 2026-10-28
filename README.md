@@ -125,9 +125,12 @@ generally represent refined working implementations.
 
 ## Repository status
 
-This repository accompanies the revised manuscript submitted to
-*Journal of Physics Communications*. The repository does not assert a
-publication decision.
+This repository accompanies the article accepted for publication in
+*Journal of Physics Communications*.
+
+Article DOI: https://doi.org/10.1088/2399-6528/aeb8df
+
+The final Version of Record may not yet be available.
 
 ## Citation
 
