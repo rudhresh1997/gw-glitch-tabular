@@ -1,0 +1,9 @@
+condition,metric,model_pairs,minimum_spearman_rho,maximum_spearman_rho,mean_spearman_rho
+chronological_split__original_nine,macro_f1_all24,3,0.95,0.9833333333333332,0.9666666666666667
+chronological_split__original_nine,weighted_f1,3,0.9333333333333332,0.9833333333333332,0.9611111111111111
+chronological_split__timestamp_free_six,macro_f1_all24,3,0.8857142857142858,0.942857142857143,0.923809523809524
+chronological_split__timestamp_free_six,weighted_f1,3,0.942857142857143,1.0,0.961904761904762
+random_split__original_nine,macro_f1_all24,3,0.9833333333333332,1.0,0.9888888888888888
+random_split__original_nine,weighted_f1,3,0.9333333333333332,0.9833333333333332,0.9555555555555554
+random_split__timestamp_free_six,macro_f1_all24,3,0.8285714285714287,0.8857142857142858,0.8476190476190477
+random_split__timestamp_free_six,weighted_f1,3,0.7714285714285715,0.8857142857142858,0.8095238095238096

@@ -1,0 +1,65 @@
+{
+  "archived_image_split_matches_frozen_chronological": false,
+  "archived_image_split_matches_frozen_random": false,
+  "chronological_split_crosstab": {
+    "All": {
+      "All": 437752,
+      "test": 87551,
+      "train": 280160,
+      "validation": 70041
+    },
+    "test": {
+      "All": 65595,
+      "test": 13189,
+      "train": 41909,
+      "validation": 10497
+    },
+    "train": {
+      "All": 306468,
+      "test": 61293,
+      "train": 196220,
+      "validation": 48955
+    },
+    "val": {
+      "All": 65689,
+      "test": 13069,
+      "train": 42031,
+      "validation": 10589
+    }
+  },
+  "frozen_chronological_test_in_image_train": 61293,
+  "frozen_chronological_validation_in_image_train": 48955,
+  "frozen_random_test_in_image_train": 61064,
+  "frozen_random_validation_in_image_train": 48926,
+  "frozen_unique_ids": 437752,
+  "label_consistent_ids": 437752,
+  "label_inconsistent_ids": 0,
+  "matched_unique_ids": 437752,
+  "random_split_crosstab": {
+    "All": {
+      "All": 437752,
+      "test": 87550,
+      "train": 280162,
+      "validation": 70040
+    },
+    "test": {
+      "All": 65595,
+      "test": 13194,
+      "train": 41824,
+      "validation": 10577
+    },
+    "train": {
+      "All": 306468,
+      "test": 61064,
+      "train": 196478,
+      "validation": 48926
+    },
+    "val": {
+      "All": 65689,
+      "test": 13292,
+      "train": 41860,
+      "validation": 10537
+    }
+  },
+  "unmatched_unique_ids": 0
+}

@@ -1,0 +1,168 @@
+{
+  "stage": "test evaluation; selection frozen before test scoring",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage1_protocol_sha256": "675d91f3dc6f2b25148e8f4e3e52d5a88a021e1619377f007f1d3a9942fe624d",
+  "script_sha256": "37894c10133e1d0e00edea4b5957254a1a871933ab9a992df0e9ae0d7e233e7f",
+  "inputs": {
+    "manifest.json": "f1eedfaa282d6ae90e1567d271f9baff06c62ba233aff5890ae5dad85cfe9605",
+    "o3_primary.csv.gz": "9d7d7d217563ccb121eba466fc442d83d7f25495e6e5ba40ea9a0962114829c6",
+    "split_summary.csv": "61de488a44179ca86205ffcb45e98baa9eb2d9a7b52a1ab13cf2845368f88d01",
+    "tuning_random_split.csv.gz": "8afbc1e03efa547ae4d51dcd3982308ebaa67f018f2fc225b59daaa55f153342",
+    "tuning_chronological_split.csv.gz": "bd4b6e9c563f0db8d0d3b0c15677ccf8290d602a589d2cf8ea482d7baf4a2f11"
+  },
+  "selections": {
+    "random_split__original_nine": {
+      "candidate": 7,
+      "rounds": 200,
+      "params": {
+        "objective": "multi:softprob",
+        "num_class": 24,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 42,
+        "eval_metric": "mlogloss",
+        "max_depth": 8,
+        "eta": 0.05,
+        "colsample_bytree": 0.8,
+        "subsample": 0.8,
+        "max_bin": 256,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0,
+        "verbosity": 1
+      },
+      "features": [
+        "peak_time",
+        "peak_time_ns",
+        "start_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "39288e200d6745180ceb5443eb724d4703f1d66d25a27260b4ffe672c213637a",
+      "selected_configuration_sha256": "aa3e88087fe36cec7c6a733b7c7e66e7758573d052708c0578f00ba3b4380660"
+    },
+    "random_split__timestamp_free_six": {
+      "candidate": 8,
+      "rounds": 150,
+      "params": {
+        "objective": "multi:softprob",
+        "num_class": 24,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 42,
+        "eval_metric": "mlogloss",
+        "max_depth": 8,
+        "eta": 0.1,
+        "colsample_bytree": 1.0,
+        "subsample": 0.8,
+        "max_bin": 256,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0,
+        "verbosity": 1
+      },
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "cec7b66dfc070f51b2c556e4d792ba712d48402948c845c73699c8a1f4dc1e1c",
+      "selected_configuration_sha256": "16018fc9e88becd36ac31eabbe913ab41c277445c0f319bd14d25bb6e5c1c60f"
+    },
+    "chronological_split__original_nine": {
+      "candidate": 7,
+      "rounds": 200,
+      "params": {
+        "objective": "multi:softprob",
+        "num_class": 24,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 42,
+        "eval_metric": "mlogloss",
+        "max_depth": 8,
+        "eta": 0.05,
+        "colsample_bytree": 0.8,
+        "subsample": 0.8,
+        "max_bin": 256,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0,
+        "verbosity": 1
+      },
+      "features": [
+        "peak_time",
+        "peak_time_ns",
+        "start_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "16b9376cdf8966b0b02f2118414960336b88f590f4813961659ddb1030de51b4",
+      "selected_configuration_sha256": "d931dde5099e1f860f871d2d30fc239a92e69b361f0c2ab30fff673a022fcf07"
+    },
+    "chronological_split__timestamp_free_six": {
+      "candidate": 2,
+      "rounds": 250,
+      "params": {
+        "objective": "multi:softprob",
+        "num_class": 24,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 42,
+        "eval_metric": "mlogloss",
+        "max_depth": 6,
+        "eta": 0.1,
+        "colsample_bytree": 0.8,
+        "subsample": 0.8,
+        "max_bin": 256,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0,
+        "verbosity": 1
+      },
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "7bebac781e6629ab0fe67f859365fe7b2ab8c351a564308c3de77523ff7f9e28",
+      "selected_configuration_sha256": "8762ccde105a6019e455d9a70d82b9a460239438c233246c91f8a92a8cc4947e"
+    }
+  },
+  "versions": {
+    "python": "3.12.9",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "xgboost": "2.1.1"
+  },
+  "training_scope": "outer training only; no validation refit",
+  "metrics": [
+    "weighted_f1",
+    "macro_f1_all24",
+    "macro_f1_supported",
+    "accuracy"
+  ],
+  "aggregation": "arithmetic mean and sample SD (ddof=1) across 3 seeds; not a confidence interval"
+}

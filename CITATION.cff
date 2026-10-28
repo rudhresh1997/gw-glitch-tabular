@@ -9,11 +9,12 @@ authors:
 repository-code: "https://github.com/rudhresh1997/gw-glitch-tabular"
 url: "https://github.com/rudhresh1997/gw-glitch-tabular"
 abstract: >
-  Code and reproducibility package for the paper
-  "Evaluating Deep Learning Models for Multiclass Classification of LIGO
-  Gravitational Wave Glitches". The repository contains model scripts,
-  HPC submission files, summary CSV files for the main figures, figure assets,
-  and workflow documentation.
+  Code and reproducibility materials for the paper
+  "Evaluating Machine-Learning Models for Multiclass Classification of
+  LIGO Gravitational-Wave Glitches." The repository contains model
+  scripts, lightweight numerical evidence, figure assets, and
+  documentation for the original benchmark and its 2026
+  referee-driven revision.
 license: "MIT"
 version: "v1.0.0"
 date-released: 2026-04-08
@@ -26,4 +27,4 @@ keywords:
   - interpretability
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.19475319
+    value: "10.5281/zenodo.19475319"

@@ -1,0 +1,14 @@
+{
+  "checkpoints_computed_during_this_process": 32,
+  "checkpoints_computed_in_v2": 32,
+  "checkpoints_imported_during_this_process": 28,
+  "checkpoints_imported_from_v1": 28,
+  "completed": true,
+  "elapsed_seconds": 3353.000468542101,
+  "model_condition_seed_units": 36,
+  "native_feature_rows": 450,
+  "next": "Share summary.json, protocol.json, the five ranking/importance CSVs, numerical_checks.csv, and cohort_prediction_replay.csv.",
+  "numerical_units": 60,
+  "output_directory": "${REVISION_ROOT}/native_attribution_v2",
+  "training_performed": false
+}

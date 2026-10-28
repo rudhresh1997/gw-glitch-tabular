@@ -1,0 +1,16 @@
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.6.1
+matplotlib==3.10.0
+xgboost==2.1.1
+torch==2.6.0
+shap==0.47.2
+captum==0.7.0
+pytorch-tabular==1.1.1
+pytorch-lightning==2.4.0
+torchmetrics==1.5.2
+omegaconf==2.3.0
+einops==0.7.0
+rich==13.9.4
+ipython==8.32.0
+pyyaml==6.0.2

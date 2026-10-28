@@ -1,0 +1,106 @@
+{
+  "added_feature": "bandwidth",
+  "architecture": "arm64",
+  "authoritative_scripts": {
+    "mlp_revision_stage1.py": "1aed088a3fa04eaed98c5fa081328b606a3085b43c2b3bd71a44bf1f14d18b93",
+    "xgboost_revision_stage1.py": "7c06aa5cffb280dea07ec88ce4c140e9d6a98db6574996b60a377d0946c78b7b"
+  },
+  "baseline_artifacts": {
+    "MLP": {
+      "path": "mlp_stage2_results/test_per_seed.csv",
+      "sha256": "ccc026e3d11c8bb9a699b698f434c853b345bc20d7f20b3be7233c8d3c5c5b15"
+    },
+    "XGBoost": {
+      "path": "xgboost_stage2_results/test_per_seed.csv",
+      "sha256": "f330921e6209deb24c31af2a3053e19df18cef53c5d4cb8f2333871feeb6ce72"
+    }
+  },
+  "expected_fits": 12,
+  "feature_condition": "timestamp_free_plus_bandwidth",
+  "features": [
+    "duration",
+    "peak_frequency",
+    "central_freq",
+    "bandwidth",
+    "amplitude",
+    "snr",
+    "q_value"
+  ],
+  "hyperparameter_rule": "Inherit the matching split-specific timestamp-free-six configuration; no bandwidth-specific retuning or validation/test selection.",
+  "inputs": {
+    "manifest.json": "f1eedfaa282d6ae90e1567d271f9baff06c62ba233aff5890ae5dad85cfe9605",
+    "o3_primary.csv.gz": "9d7d7d217563ccb121eba466fc442d83d7f25495e6e5ba40ea9a0962114829c6",
+    "split_summary.csv": "61de488a44179ca86205ffcb45e98baa9eb2d9a7b52a1ab13cf2845368f88d01"
+  },
+  "mlp": {
+    "activation": "Mish",
+    "batch_size": 1024,
+    "epochs": 20,
+    "numeric_representation": "training-fitted StandardScaler on float64 then float32 tensors",
+    "objective": "unweighted cross entropy",
+    "optimizer": "AdamW",
+    "weight_decay": 0.01
+  },
+  "models": [
+    "XGBoost",
+    "MLP"
+  ],
+  "pilot_reuse": false,
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "reference_features": [
+    "duration",
+    "peak_frequency",
+    "central_freq",
+    "amplitude",
+    "snr",
+    "q_value"
+  ],
+  "script_sha256": "b481023112a06e10381fb756e72eb92694b07816404d32617b267b0e2fd65562",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "selection_artifacts": {
+    "MLP__chronological_split": {
+      "candidate": 8,
+      "path": "mlp_stage1_results/chronological_split__timestamp_free_six/selected_configuration.json",
+      "sha256": "29730eb265893bb1216e5d0abee2711b74b315264b923387eea09306148b7174"
+    },
+    "MLP__random_split": {
+      "candidate": 11,
+      "path": "mlp_stage1_results/random_split__timestamp_free_six/selected_configuration.json",
+      "sha256": "a77512a79daf8b3667c383e4d26590e7bccee6e3433ef1537a8a3611e0e0870a"
+    },
+    "XGBoost__chronological_split": {
+      "candidate": 2,
+      "path": "xgboost_stage1_results/chronological_split__timestamp_free_six/selected_configuration.json",
+      "sha256": "8762ccde105a6019e455d9a70d82b9a460239438c233246c91f8a92a8cc4947e"
+    },
+    "XGBoost__random_split": {
+      "candidate": 8,
+      "path": "xgboost_stage1_results/random_split__timestamp_free_six/selected_configuration.json",
+      "sha256": "16018fc9e88becd36ac31eabbe913ab41c277445c0f319bd14d25bb6e5c1c60f"
+    }
+  },
+  "splits": {
+    "chronological_split": "frozen group-disjoint chronological 64/16/20 split",
+    "random_split": "frozen grouped-random 64/16/20 split"
+  },
+  "stage": "frozen timestamp-free bandwidth augmentation with final test evaluation",
+  "test_policy": "One final evaluation for every frozen model/split/seed; no selection from test results",
+  "threads": 2,
+  "version": "1.0",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "python": "3.12.9",
+    "sklearn": "1.6.1",
+    "torch": "2.6.0",
+    "xgboost": "2.1.1"
+  },
+  "xgboost": {
+    "class_weighting": "balanced sample weights computed from full training partition",
+    "numeric_representation": "raw float32"
+  }
+}

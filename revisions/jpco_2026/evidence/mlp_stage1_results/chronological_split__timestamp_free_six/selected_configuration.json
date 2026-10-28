@@ -1,0 +1,55 @@
+{
+  "candidate": 8,
+  "cv_mean_weighted_f1": 0.7469339144142436,
+  "cv_fit_seconds": 18.968276540981606,
+  "params": {
+    "hidden_dims": [
+      512,
+      256,
+      128
+    ],
+    "dropout": 0.0,
+    "learning_rate": 0.003
+  },
+  "epochs": 20,
+  "activation": "Mish",
+  "weight_decay": 0.01,
+  "batch_size": 1024,
+  "features": [
+    "duration",
+    "peak_frequency",
+    "central_freq",
+    "amplitude",
+    "snr",
+    "q_value"
+  ],
+  "labels": [
+    "1080Lines",
+    "1400Ripples",
+    "Air_Compressor",
+    "Blip",
+    "Blip_Low_Frequency",
+    "Chirp",
+    "Extremely_Loud",
+    "Fast_Scattering",
+    "Helix",
+    "Koi_Fish",
+    "Light_Modulation",
+    "Low_Frequency_Burst",
+    "Low_Frequency_Lines",
+    "No_Glitch",
+    "None_of_the_Above",
+    "Paired_Doves",
+    "Power_Line",
+    "Repeating_Blips",
+    "Scattered_Light",
+    "Scratchy",
+    "Tomte",
+    "Violin_Mode",
+    "Wandering_Line",
+    "Whistle"
+  ],
+  "full_training_seed": 42,
+  "protocol_sha256": "2cd30e32ca65a3f6f33633da2ec873516ff804b1faf41f9b996a3f206129a801",
+  "selection_used_outer_validation": false
+}

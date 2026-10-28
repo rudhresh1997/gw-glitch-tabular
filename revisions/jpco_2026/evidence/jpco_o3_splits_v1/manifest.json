@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "source_sha256": {
+    "H1_O3a.csv": "f3371e66f6b4746bcf8a101836ac0dad2e611457d617cf99078f22c247cae9c9",
+    "H1_O3b.csv": "f17ae6344220d985ddaf134481a9074f89c5dd2fcf345870b20381c008d7cb04",
+    "L1_O3a.csv": "e82e1fcfc1bd0449ce6263214599807ce70d96a97ff06a3caf6c1e7d450dbc32",
+    "L1_O3b.csv": "dd2e66c2afbdb6a80aec9081a9bfd29b577cf3f6e9c2d289300de33fc6c2c04a"
+  },
+  "source_rows": 500524,
+  "primary_rows": 437753,
+  "source_groups": 437768,
+  "primary_groups": 437750,
+  "conflicting_groups": 18,
+  "conflicting_records": 39,
+  "duplicate_copies_collapsed_nonconflicting": 62732,
+  "feature_sets": {
+    "original_nine": [
+      "peak_time",
+      "peak_time_ns",
+      "start_time_ns",
+      "duration",
+      "peak_frequency",
+      "central_freq",
+      "amplitude",
+      "snr",
+      "q_value"
+    ],
+    "timestamp_free_six": [
+      "duration",
+      "peak_frequency",
+      "central_freq",
+      "amplitude",
+      "snr",
+      "q_value"
+    ],
+    "enriched_eleven": [
+      "peak_time",
+      "peak_time_ns",
+      "start_time",
+      "start_time_ns",
+      "duration",
+      "peak_frequency",
+      "central_freq",
+      "bandwidth",
+      "amplitude",
+      "snr",
+      "q_value"
+    ]
+  },
+  "target": "ml_label",
+  "chronological_cutoffs_gps_ns": [
+    1260331692937500000,
+    1262848360812500000
+  ],
+  "random_seed": 42,
+  "tuning_seed": 20260915,
+  "tuning_subsets": {
+    "random_split": {
+      "rows": 32000,
+      "groups": 32000,
+      "classes": 24
+    },
+    "chronological_split": {
+      "rows": 32002,
+      "groups": 32000,
+      "classes": 24
+    }
+  },
+  "checks": {
+    "random_split_train_validation_group_overlap": 0,
+    "random_split_train_validation_identical_9feature_rows": 0,
+    "random_split_train_test_group_overlap": 0,
+    "random_split_train_test_identical_9feature_rows": 0,
+    "random_split_validation_test_group_overlap": 0,
+    "random_split_validation_test_identical_9feature_rows": 0,
+    "chronological_split_train_validation_group_overlap": 0,
+    "chronological_split_train_validation_identical_9feature_rows": 0,
+    "chronological_split_train_test_group_overlap": 0,
+    "chronological_split_train_test_identical_9feature_rows": 0,
+    "chronological_split_validation_test_group_overlap": 0,
+    "chronological_split_validation_test_identical_9feature_rows": 0,
+    "strict_chronological_order": true
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  }
+}
