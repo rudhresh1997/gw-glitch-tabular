@@ -1,0 +1,39 @@
+{
+  "full_metadata_experiment": {
+    "classes": 24,
+    "frozen_ids_mapped": 437752,
+    "local_image_sample_availability": 0.0,
+    "urls_present": true
+  },
+  "gates": {
+    "all_frozen_ids_present_in_full_metadata": true,
+    "archived_split_matches_frozen_chronological": false,
+    "archived_split_matches_frozen_random": false,
+    "full_images_available_locally": false,
+    "mini_predictions_form_matched_baseline": false,
+    "overlap_labels_consistent": true,
+    "same_24_class_label_space": true
+  },
+  "images_downloaded": false,
+  "mini_experiment": {
+    "archived_models": [
+      "CNN",
+      "ViT"
+    ],
+    "classes": 10,
+    "frozen_cohort_overlap_ids": 0,
+    "rows": 2972,
+    "seeds": 1
+  },
+  "revision_action": "Do not report the archived CNN or ViT numbers as a numerical baseline. Add a transparent limitation explaining why a controlled image-versus-tabular comparison was not performed, and contextualize the distinction using published image-based Gravity Spy work.",
+  "status": "matched_existing_image_baseline_not_feasible",
+  "test_evaluated": false,
+  "training_performed": false,
+  "why_existing_results_are_not_comparable": [
+    "The archived mini image experiment contains only 10 classes and has zero event overlap with the frozen tabular O3 cohort.",
+    "The full image metadata covers the 24-class frozen cohort, but the image files are not stored locally.",
+    "The archived image train/validation/test assignments differ from both frozen tabular split protocols.",
+    "Using a model trained with the archived image split would expose part of the frozen tabular test set during image-model training.",
+    "A controlled comparison would therefore require downloading the O3 images and retraining image models from scratch under the frozen grouped-random and chronological assignments."
+  ]
+}

@@ -1,0 +1,13 @@
+analysis,model,feature_set,split,reference_weighted_f1,comparison_weighted_f1,difference,difference_percentage_points
+timestamp_removal,XGBoost,Timestamp-free minus original,random_split,0.8297418057139673,0.8250533399775447,-0.004688465736422565,-0.46884657364225646
+timestamp_removal,XGBoost,Timestamp-free minus original,chronological_split,0.7280638522924651,0.6999492128422465,-0.028114639450218526,-2.8114639450218526
+timestamp_removal,MLP,Timestamp-free minus original,random_split,0.8253893844078773,0.8141105603064073,-0.011278824101470075,-1.1278824101470075
+timestamp_removal,MLP,Timestamp-free minus original,chronological_split,0.6461775487404532,0.7154573898379226,0.06927984109746943,6.927984109746943
+timestamp_removal,FT-Transformer,Timestamp-free minus original,random_split,0.7945975107954735,0.7809912536166124,-0.013606257178861103,-1.3606257178861103
+timestamp_removal,FT-Transformer,Timestamp-free minus original,chronological_split,0.675729988599801,0.6885726600014275,0.012842671401626427,1.2842671401626427
+chronological_minus_random,XGBoost,Original nine,Chronological minus random,0.8297418057139673,0.7280638522924651,-0.10167795342150221,-10.167795342150221
+chronological_minus_random,XGBoost,Timestamp-free six,Chronological minus random,0.8250533399775447,0.6999492128422465,-0.12510412713529817,-12.510412713529817
+chronological_minus_random,MLP,Original nine,Chronological minus random,0.8253893844078773,0.6461775487404532,-0.17921183566742416,-17.921183566742414
+chronological_minus_random,MLP,Timestamp-free six,Chronological minus random,0.8141105603064073,0.7154573898379226,-0.09865317046848465,-9.865317046848466
+chronological_minus_random,FT-Transformer,Original nine,Chronological minus random,0.7945975107954735,0.675729988599801,-0.11886752219567243,-11.886752219567242
+chronological_minus_random,FT-Transformer,Timestamp-free six,Chronological minus random,0.7809912536166124,0.6885726600014275,-0.0924185936151849,-9.24185936151849

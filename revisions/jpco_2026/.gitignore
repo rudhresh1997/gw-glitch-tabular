@@ -1,0 +1,23 @@
+# Generated execution directories
+workers/
+run_logs/
+pilot_outputs/
+checkpoints/
+models/
+
+# Serialized models and prediction arrays
+*.ubj
+*.npz
+*.npy
+*.parquet
+
+# Frozen event-level data and assignments
+o3_primary.csv.gz
+split_assignments.csv.gz
+tuning_*.csv.gz
+
+# Local source and processed catalogues
+H1_O*.csv
+L1_O*.csv
+original_data*.csv
+sampled_data*.csv

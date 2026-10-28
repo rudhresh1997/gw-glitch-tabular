@@ -1,0 +1,30 @@
+{
+  "completed": true,
+  "feature_condition": "timestamp_free_plus_bandwidth",
+  "models": [
+    "XGBoost",
+    "MLP"
+  ],
+  "next": "Share summary.json, protocol.json, test_per_seed.csv, test_summary.csv, paired_differences.csv, and paired_difference_summary.csv.",
+  "output_directory": "${REVISION_ROOT}/bandwidth_augmentation_v1/full_suite",
+  "output_sha256": {
+    "paired_difference_summary.csv": "715785ea124bb14fe4ecfea595071ac135ff7f3cad797a448e632b9015c75438",
+    "paired_differences.csv": "ffc7815d4ff211c88b7e7b274bf8de385c3321d51f83c5e7962b315ab85e3a5a",
+    "protocol.json": "b8df2802e5a9d2ebeeb55ea29ecb3d8337e3c2312a4f395cf4df21a327e9387e",
+    "test_per_seed.csv": "1ac44b15d5a743a979a7a4235116559f25576be830d37a5ecb32363a478ff877",
+    "test_summary.csv": "21d96f80b78db49a0acc1a6b3c50fd7c02fe14457801e6ce0ba095d4bf9a874a"
+  },
+  "pilot_reused": false,
+  "protocol_sha256": "b8df2802e5a9d2ebeeb55ea29ecb3d8337e3c2312a4f395cf4df21a327e9387e",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "splits": [
+    "random_split",
+    "chronological_split"
+  ],
+  "test_evaluated": true,
+  "workers": 12
+}

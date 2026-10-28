@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "condition": "random_split__original_nine",
+  "models": [
+    "XGBoost",
+    "MLP",
+    "FT-Transformer"
+  ],
+  "next": "Share summary.json, protocol.json, complexity_per_seed.csv, complexity_summary.csv, latency_per_seed.csv, and latency_summary.csv.",
+  "output_directory": "${REVISION_ROOT}/complexity_benchmark_v1",
+  "prediction_replays_passed": 9,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "training_performed": false,
+  "workers": 9
+}

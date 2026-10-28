@@ -1,0 +1,159 @@
+{
+  "stage": "frozen targeted feature ablations with final grouped-random test evaluation",
+  "version": "1.0",
+  "script_sha256": "41995316407f200dff733345b0ec08f0ac128c870a4386ed50a83d15df1ab7c5",
+  "inputs": {
+    "manifest.json": "f1eedfaa282d6ae90e1567d271f9baff06c62ba233aff5890ae5dad85cfe9605",
+    "o3_primary.csv.gz": "9d7d7d217563ccb121eba466fc442d83d7f25495e6e5ba40ea9a0962114829c6",
+    "split_summary.csv": "61de488a44179ca86205ffcb45e98baa9eb2d9a7b52a1ab13cf2845368f88d01",
+    "tuning_random_split.csv.gz": "8afbc1e03efa547ae4d51dcd3982308ebaa67f018f2fc225b59daaa55f153342"
+  },
+  "authoritative_scripts": {
+    "xgboost_revision_stage1.py": "7c06aa5cffb280dea07ec88ce4c140e9d6a98db6574996b60a377d0946c78b7b",
+    "mlp_revision_stage1.py": "1aed088a3fa04eaed98c5fa081328b606a3085b43c2b3bd71a44bf1f14d18b93"
+  },
+  "selection_artifacts": {
+    "xgb_original": {
+      "path": "xgboost_stage1_results/random_split__original_nine/selected_configuration.json",
+      "sha256": "aa3e88087fe36cec7c6a733b7c7e66e7758573d052708c0578f00ba3b4380660"
+    },
+    "xgb_six": {
+      "path": "xgboost_stage1_results/random_split__timestamp_free_six/selected_configuration.json",
+      "sha256": "16018fc9e88becd36ac31eabbe913ab41c277445c0f319bd14d25bb6e5c1c60f"
+    },
+    "mlp_original": {
+      "path": "mlp_stage1_results/random_split__original_nine/selected_configuration.json",
+      "sha256": "c2640a2888677b8f17b073db4ba6e50620f6b44a10c9177c98e232fd4a802e43"
+    },
+    "mlp_six": {
+      "path": "mlp_stage1_results/random_split__timestamp_free_six/selected_configuration.json",
+      "sha256": "a77512a79daf8b3667c383e4d26590e7bccee6e3433ef1537a8a3611e0e0870a"
+    }
+  },
+  "baseline_artifacts": {
+    "XGBoost": {
+      "path": "xgboost_stage2_results/test_per_seed.csv",
+      "sha256": "f330921e6209deb24c31af2a3053e19df18cef53c5d4cb8f2333871feeb6ce72"
+    },
+    "MLP": {
+      "path": "mlp_stage2_results/test_per_seed.csv",
+      "sha256": "ccc026e3d11c8bb9a699b698f434c853b345bc20d7f20b3be7233c8d3c5c5b15"
+    }
+  },
+  "split": "frozen grouped-random 64/16/20 train/validation/test split",
+  "conditions": {
+    "remove_start_time_ns": {
+      "reference": "original_nine",
+      "features": [
+        "peak_time",
+        "peak_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "removed": [
+        "start_time_ns"
+      ]
+    },
+    "remove_peak_time_pair": {
+      "reference": "original_nine",
+      "features": [
+        "start_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "removed": [
+        "peak_time",
+        "peak_time_ns"
+      ]
+    },
+    "timestamp_free_remove_amplitude_snr": {
+      "reference": "timestamp_free_six",
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "q_value"
+      ],
+      "removed": [
+        "amplitude",
+        "snr"
+      ]
+    },
+    "timestamp_free_remove_q": {
+      "reference": "timestamp_free_six",
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr"
+      ],
+      "removed": [
+        "q_value"
+      ]
+    }
+  },
+  "models": [
+    "XGBoost",
+    "MLP"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "expected_fits": 24,
+  "pilot_reuse": {
+    "model": "XGBoost",
+    "condition": "remove_start_time_ns",
+    "seed": 42,
+    "source_protocol_sha256": "70677579fe36119dbc07f989945cc3f8c09273aad80254c4de198b6adb492486",
+    "source_artifact_sha256": {
+      "model.ubj": "896e71459a7993d4b7c5c4289be095217e2f8b39f1d06a5dc559d42663e26ad7",
+      "label_mapping.json": "305af76438bb449d045b7530fffe619383948fdf607f0480942feddc35627d42",
+      "validation_predictions.npz": "364fba8e7f049c0889fa4786b69e4e7e84936c5d3dac1fd0f25f3278140243b4"
+    }
+  },
+  "hyperparameter_rule": "Original-nine configuration is inherited for the two timing ablations; timestamp-free-six configuration is inherited for amplitude/SNR and Q ablations. No ablation-specific retuning or validation-based selection.",
+  "xgboost": {
+    "numeric_representation": "raw float32",
+    "class_weighting": "balanced sample weights computed from full training partition",
+    "reference_candidates": {
+      "original_nine": 7,
+      "timestamp_free_six": 8
+    }
+  },
+  "mlp": {
+    "numeric_representation": "training-fitted StandardScaler on float64, then float32 tensors",
+    "epochs": 20,
+    "batch_size": 1024,
+    "activation": "Mish",
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "objective": "unweighted cross entropy",
+    "reference_candidates": {
+      "original_nine": 8,
+      "timestamp_free_six": 11
+    }
+  },
+  "test_policy": "One final evaluation of every frozen model/condition/seed; no selection from test results",
+  "versions": {
+    "python": "3.12.9",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "xgboost": "2.1.1",
+    "torch": "2.6.0"
+  },
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "architecture": "arm64",
+  "threads": 2
+}

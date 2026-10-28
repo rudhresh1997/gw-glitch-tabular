@@ -1,0 +1,121 @@
+{
+  "stage": "FT-Transformer fixed three-seed test evaluation",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "script_sha256": "aa6959a300e51b6284a5278b457a166138ed0bee68ca32bb583810c15d8f6d05",
+  "stage1_protocol_sha256": "c2df0ad2ad895d722b803392616823ce22cc6f60a199e777346a3fd53ccc0dd4",
+  "inputs": {
+    "manifest.json": "f1eedfaa282d6ae90e1567d271f9baff06c62ba233aff5890ae5dad85cfe9605",
+    "o3_primary.csv.gz": "9d7d7d217563ccb121eba466fc442d83d7f25495e6e5ba40ea9a0962114829c6",
+    "split_summary.csv": "61de488a44179ca86205ffcb45e98baa9eb2d9a7b52a1ab13cf2845368f88d01",
+    "tuning_random_split.csv.gz": "8afbc1e03efa547ae4d51dcd3982308ebaa67f018f2fc225b59daaa55f153342",
+    "tuning_chronological_split.csv.gz": "bd4b6e9c563f0db8d0d3b0c15677ccf8290d602a589d2cf8ea482d7baf4a2f11"
+  },
+  "selections": {
+    "random_split__original_nine": {
+      "candidate": 10,
+      "params": {
+        "num_attn_blocks": 3,
+        "dropout": 0.2,
+        "learning_rate": 0.001
+      },
+      "features": [
+        "peak_time",
+        "peak_time_ns",
+        "start_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "e4314acb4df26e6656b2787b4957d78fa1492a2faceb8daeea347418d5de5f68",
+      "scaler_sha256": "772217b5e00480bd79fd6a93f2b847c73b7cd093e0d627145deee2818f9b50ce",
+      "selected_configuration_sha256": "1a4b0b0bdce5536becf17dd56c87cbdd015e6415ff5386708c7b1197e283ec68"
+    },
+    "random_split__timestamp_free_six": {
+      "candidate": 7,
+      "params": {
+        "num_attn_blocks": 3,
+        "dropout": 0.0,
+        "learning_rate": 0.001
+      },
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "14cd90c5abf8d9a98f9460ba1d4eddecc7ca24f7fc47b5920cd539b7a7b66a22",
+      "scaler_sha256": "264753e3e6cb6cccde78dd0102003210915c0c28a9a8602f2b49a8072280a339",
+      "selected_configuration_sha256": "abf4307eba73e3b5ad7bc42c90f8d8b649510e077896126d5a8527c4bd14c2f9"
+    },
+    "chronological_split__original_nine": {
+      "candidate": 2,
+      "params": {
+        "num_attn_blocks": 2,
+        "dropout": 0.0,
+        "learning_rate": 0.003
+      },
+      "features": [
+        "peak_time",
+        "peak_time_ns",
+        "start_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "d407f90aeb6d2611508509238dfd338377408d591a34535bc620b1fea55e6716",
+      "scaler_sha256": "85ddcea7d68c0138bdfe1f28a630235434415a83576884c88f7bd3b509bed52f",
+      "selected_configuration_sha256": "da300648096f881f854aea4aaed38bb0565e2adbe23e4328350c9950274ba85a"
+    },
+    "chronological_split__timestamp_free_six": {
+      "candidate": 2,
+      "params": {
+        "num_attn_blocks": 2,
+        "dropout": 0.0,
+        "learning_rate": 0.003
+      },
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "b4994c328974e51a80fa5351c9190846e1df51cffb5e74680bcb870cb60642e1",
+      "scaler_sha256": "9494f5f55095ae8a1aec2769f8b2041719b0c8125d4d47753f2d4194a96a1fd3",
+      "selected_configuration_sha256": "9833bcfff1a75774627b32057bccadf9d6f49e831c04e741206c8e9677a8e282"
+    }
+  },
+  "versions": {
+    "python": "3.12.9",
+    "torch": "2.6.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "pytorch_tabular": "1.1.1",
+    "pytorch_lightning": "2.4.0",
+    "torchmetrics": "1.5.2"
+  },
+  "epochs": 20,
+  "training_scope": "outer training only; no validation refit",
+  "test_used_for_selection": false,
+  "metrics": [
+    "weighted_f1",
+    "macro_f1_all24",
+    "macro_f1_supported",
+    "accuracy"
+  ],
+  "aggregation": "arithmetic mean and sample SD ddof=1; not a confidence interval"
+}

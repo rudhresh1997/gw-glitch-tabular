@@ -1,0 +1,31 @@
+{
+  "completed": true,
+  "conditions": [
+    "remove_start_time_ns",
+    "remove_peak_time_pair",
+    "timestamp_free_remove_amplitude_snr",
+    "timestamp_free_remove_q"
+  ],
+  "models": [
+    "XGBoost",
+    "MLP"
+  ],
+  "next": "Share summary.json, protocol.json, test_per_seed.csv, test_summary.csv, paired_differences.csv, and paired_difference_summary.csv.",
+  "output_directory": "${REVISION_ROOT}/targeted_ablation_v1/full_suite",
+  "output_sha256": {
+    "paired_difference_summary.csv": "425de2eec5e9961521d36436ae9263139d6e81a12a49dada680454ea8b16f3c6",
+    "paired_differences.csv": "79f6c7fc742b51595b2a5ad5e044eae1778c4e87e0ce6f69c1c7995125251c3a",
+    "protocol.json": "ed009e13c86e91c82c7cfb4ef56cba2eeb264ef0a0be28f8b696e212171e8087",
+    "test_per_seed.csv": "975de6aed7254bc60adf8e5f4e4dbe355707dcb787dcc63e0e9b5e3418877172",
+    "test_summary.csv": "c112127ac95bdc12d5381feebbe1c94728f24297e970bb010c3ee03220e96480"
+  },
+  "protocol_sha256": "ed009e13c86e91c82c7cfb4ef56cba2eeb264ef0a0be28f8b696e212171e8087",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "test_evaluated": true,
+  "verified_pilot_reused": true,
+  "workers": 24
+}

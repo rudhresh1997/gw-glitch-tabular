@@ -1,14 +1,19 @@
 # gw-glitch-tabular
 
-Code and reproducibility package for the paper:
+Code and reproducibility materials for:
 
-**Evaluating Deep Learning Models for Multiclass Classification of LIGO Gravitational Wave Glitches**
+**Evaluating Machine-Learning Models for Multiclass Classification of
+LIGO Gravitational-Wave Glitches**
 
-Zenodo DOI: https://doi.org/10.5281/zenodo.19475319
+Zenodo DOI:
+https://doi.org/10.5281/zenodo.19475319
 
 ## Overview
 
-This repository contains code, configurations, summary results, interpretability analyses, and figure-generation assets for benchmarking classical and deep learning models on tabular glitch metadata.
+This repository contains code, configurations, lightweight summary
+results, interpretability analyses, and figure-generation assets for
+benchmarking classical and deep-learning models on tabular gravitational-
+wave glitch metadata.
 
 ## Models
 
@@ -25,72 +30,106 @@ This repository contains code, configurations, summary results, interpretability
 
 ## Dataset
 
-The dataset used in this work was obtained from:
+The source data were obtained from the Gravity Spy O3 dataset:
 
-Gravity Spy Dataset (O3):
 https://doi.org/10.5281/zenodo.5649212
 
-The repository does not include the raw dataset due to size and redistribution considerations. Users should download the dataset from the above source and place it in the appropriate directory as described in the documentation.
+Raw datasets are not included because of their size and redistribution
+considerations.
 
-Two cleaned datasets are used locally during the workflow:
+The original benchmark used two locally prepared cleaned datasets:
 
-- `original_data_cleaned.csv`: full dataset with 500,000 samples
-- `sampled_data_cleaned.csv`: sampled dataset with 50,000 samples preserving the original class distribution
+- `original_data_cleaned.csv`: 500,524 rows;
+- `sampled_data_cleaned.csv`: 50,554 rows.
 
-Each dataset contains:
-- 9 feature columns
-- 1 target column: `ml_label`
+Each contains nine feature columns and one target column, `ml_label`.
+The historical sampled dataset began with an approximately 50,000-row
+stratified sample. Its four rarest classes were subsequently expanded
+with replacement, producing the final total of 50,554 rows. See the
+2026 revision audit for the precise provenance and limitations of this
+historical procedure.
 
-The feature definitions correspond to Table I of the paper.
+## Original benchmark workflow
 
-## Split policy
+The original benchmark used a stratified 64/16/20
+train/validation/test division:
 
-Train/validation/test split:
-- Train: 64%
-- Validation: 16%
-- Test: 20%
+- training: 64%;
+- validation: 16%;
+- test: 20%.
 
-## Workflow
+The workflow was:
 
-1. Generate class-distribution figure from the full dataset
-2. Tune models on the sampled dataset using 5-fold cross-validation and 100 Optuna trials
-3. Train final models on the full dataset using best hyperparameters across 15 random seeds
-4. Evaluate models and save metrics, confusion matrices, ROC curves, and PR curves
-5. Compute interpretability outputs using TreeSHAP or Captum
-6. Generate paper figures from summary CSV files and model-specific outputs
+1. generate the class-distribution figure;
+2. tune models on the sampled dataset using five-fold cross-validation
+   and Optuna;
+3. train final models on the full processed dataset across multiple
+   random seeds;
+4. evaluate classification and computational metrics;
+5. compute model-native feature attributions using TreeSHAP or Captum;
+6. generate manuscript figures from lightweight summary files.
 
-## Summary files used for paper figures
+## 2026 referee-driven revision package
 
-The `results/summary/` directory contains the lightweight CSV files used to generate the main figures in the paper:
+The curated revision package is located at
+revisions/jpco_2026/.
 
-- `f1_scores_all_models.csv` — Figure 3
-- `training_time_summary.csv` — Figure 4
-- `inference_time_summary.csv` — Figure 5
-- `model_complexity_summary.csv` — Figure 6
-- `spearman_vs_xgboost.csv` — Figure 7
-- `cross_model_alignment.csv` — Figure 8
-- `normalized_confusion_matrix_danet.csv` — Figure 9
-- `counts_confusion_matrix_danet.csv` — Figure 10
-- `scaling_behavior.csv` — Figure 11
-- `global_feature_importance_summary.csv` — Figure 12
-- `modelwise_feature_importance_summary.csv` — Figure 13
+It contains:
+
+- six portable, output-cleared notebooks;
+- reviewed experiment and audit scripts;
+- a duplicate-aware O3 cohort and split protocol;
+- grouped-random and chronological generalization analyses;
+- timestamp and targeted feature ablations;
+- native-attribution and common permutation-importance analyses;
+- operational footprint and CPU-latency measurements;
+- bandwidth-augmentation results;
+- feature-provenance and image-comparison feasibility audits; and
+- lightweight, checksum-audited numerical evidence.
+
+The reconstructed revision cohort contains 437,753 events. Identity
+groups were kept disjoint across frozen 64/16/20 grouped-random and
+chronological partitions. Large event-level datasets, trained models,
+predictions, checkpoints, and logs are intentionally excluded.
+
+For scope, environment, path configuration, execution order, and
+reproducibility boundaries, see
+revisions/jpco_2026/README.md.
+
+## Summary files for the original paper figures
+
+The `results/summary/` directory contains lightweight CSV files used to
+generate the original manuscript figures, including:
+
+- `f1_scores_all_models.csv`
+- `training_time_summary.csv`
+- `inference_time_summary.csv`
+- `model_complexity_summary.csv`
+- `spearman_vs_xgboost.csv`
+- `cross_model_alignment.csv`
+- `normalized_confusion_matrix_danet.csv`
+- `counts_confusion_matrix_danet.csv`
+- `scaling_behavior.csv`
+- `global_feature_importance_summary.csv`
+- `modelwise_feature_importance_summary.csv`
+
+The revised operational-complexity Figure 6 and its source table are
+distributed within the revision evidence directory.
 
 ## Legacy scripts
 
-Original research scripts are preserved under `src/legacy/` during modular refactoring.
-
-For several PyTorch Tabular models, both an original script and a refined `v2` script are preserved. For example:
-- `danet.py` and `danetv2.py`
-- `danet.pbs` and `danetv2.pbs`
-
-The `v2` scripts generally correspond to improved working variants, while the earlier versions are retained for provenance.
+Original research scripts are preserved under `src/legacy/` during
+modular refactoring. Where both original and `v2` variants exist, the
+earlier scripts are retained for provenance and the later variants
+generally represent refined working implementations.
 
 ## Repository status
 
-This repository is being prepared as the public companion repository for paper reproducibility and DOI archiving.
+This repository accompanies the revised manuscript submitted to
+*Journal of Physics Communications*. The repository does not assert a
+publication decision.
 
 ## Citation
 
-If you use this repository, please cite the GitHub repository and the Zenodo archived release once the DOI is available.
-
-Citation metadata is provided in `CITATION.cff`.
+If you use this repository, cite the archived software release using the
+Zenodo DOI above. Citation metadata are provided in `CITATION.cff`.

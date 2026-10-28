@@ -1,0 +1,60 @@
+{
+  "status": "resolved_at_class_count_level",
+  "full_dataset_rows": 500524,
+  "historical_initial_sample_rows": 50000,
+  "historical_final_sample_rows": 50554,
+  "larger_class_count_match": true,
+  "larger_class_exact_row_multiset_match": false,
+  "rare_classes": {
+    "None_of_the_Above": {
+      "full_rows": 24,
+      "initial_stratified_rows": 2,
+      "final_sample_rows": 24,
+      "net_rows_added": 22,
+      "observed_unique_rows": 12,
+      "full_unique_rows": 17
+    },
+    "Helix": {
+      "full_rows": 390,
+      "initial_stratified_rows": 39,
+      "final_sample_rows": 390,
+      "net_rows_added": 351,
+      "observed_unique_rows": 212,
+      "full_unique_rows": 326
+    },
+    "Chirp": {
+      "full_rows": 85,
+      "initial_stratified_rows": 8,
+      "final_sample_rows": 85,
+      "net_rows_added": 77,
+      "observed_unique_rows": 49,
+      "full_unique_rows": 70
+    },
+    "Wandering_Line": {
+      "full_rows": 116,
+      "initial_stratified_rows": 12,
+      "final_sample_rows": 116,
+      "net_rows_added": 104,
+      "observed_unique_rows": 65,
+      "full_unique_rows": 96
+    }
+  },
+  "initial_combined_rare_rows": 61,
+  "final_combined_rare_rows": 615,
+  "net_rows_added": 554,
+  "unique_sample_records_absent_from_full": 0,
+  "identities_exceeding_full_multiplicity": 132,
+  "excess_repeated_rows": 213,
+  "supported_conclusions": [
+    "The 20 larger classes have exactly the counts expected from a 50000-row stratified sample.",
+    "The four rarest classes were expanded from 61 combined rows to 615 combined rows, producing the final total of 50554 rows.",
+    "Every unique sampled record originates from the full processed dataset.",
+    "The rare-class expansion involved replacement-based repeated selections."
+  ],
+  "limitations": [
+    "The exact common-class row multiset was not reproduced from original_data.csv using train_test_split with random_state=42.",
+    "The precise historical intermediate input ordering or source snapshot is therefore not recoverable from the currently archived files.",
+    "The reconstruction supports the class-count procedure but not an exact row-for-row regeneration."
+  ],
+  "revision_protocol_note": "The referee-driven revision experiments do not reuse the historical 50554-row sampling procedure. They use the reconstructed, duplicate-aware, group-disjoint O3 cohort and frozen random and chronological split assignments."
+}

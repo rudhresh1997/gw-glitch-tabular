@@ -1,0 +1,134 @@
+{
+  "stage": "MLP fixed three-seed test evaluation",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "script_sha256": "4e9be180bf7db4efc8351d9430572dc935086aaf6af4ebfaf80a16ac77522d70",
+  "stage1_protocol_sha256": "2cd30e32ca65a3f6f33633da2ec873516ff804b1faf41f9b996a3f206129a801",
+  "inputs": {
+    "manifest.json": "f1eedfaa282d6ae90e1567d271f9baff06c62ba233aff5890ae5dad85cfe9605",
+    "o3_primary.csv.gz": "9d7d7d217563ccb121eba466fc442d83d7f25495e6e5ba40ea9a0962114829c6",
+    "split_summary.csv": "61de488a44179ca86205ffcb45e98baa9eb2d9a7b52a1ab13cf2845368f88d01",
+    "tuning_random_split.csv.gz": "8afbc1e03efa547ae4d51dcd3982308ebaa67f018f2fc225b59daaa55f153342",
+    "tuning_chronological_split.csv.gz": "bd4b6e9c563f0db8d0d3b0c15677ccf8290d602a589d2cf8ea482d7baf4a2f11"
+  },
+  "selections": {
+    "random_split__original_nine": {
+      "candidate": 8,
+      "params": {
+        "hidden_dims": [
+          512,
+          256,
+          128
+        ],
+        "dropout": 0.0,
+        "learning_rate": 0.003
+      },
+      "features": [
+        "peak_time",
+        "peak_time_ns",
+        "start_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "a2fb6cc4333b45aff133546db18fa0c16a493a1c9c2e61a1d562ba6c00f53578",
+      "scaler_sha256": "772217b5e00480bd79fd6a93f2b847c73b7cd093e0d627145deee2818f9b50ce",
+      "selected_configuration_sha256": "c2640a2888677b8f17b073db4ba6e50620f6b44a10c9177c98e232fd4a802e43"
+    },
+    "random_split__timestamp_free_six": {
+      "candidate": 11,
+      "params": {
+        "hidden_dims": [
+          512,
+          256,
+          128
+        ],
+        "dropout": 0.2,
+        "learning_rate": 0.003
+      },
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "71e9c29ec07075b62e5401b6352840d44edb412847ccd7b21286bd9723d2422e",
+      "scaler_sha256": "264753e3e6cb6cccde78dd0102003210915c0c28a9a8602f2b49a8072280a339",
+      "selected_configuration_sha256": "a77512a79daf8b3667c383e4d26590e7bccee6e3433ef1537a8a3611e0e0870a"
+    },
+    "chronological_split__original_nine": {
+      "candidate": 11,
+      "params": {
+        "hidden_dims": [
+          512,
+          256,
+          128
+        ],
+        "dropout": 0.2,
+        "learning_rate": 0.003
+      },
+      "features": [
+        "peak_time",
+        "peak_time_ns",
+        "start_time_ns",
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "d14246c2101787b8292be41899474ce4bb3d42c4f3316c7389a70a8577391054",
+      "scaler_sha256": "85ddcea7d68c0138bdfe1f28a630235434415a83576884c88f7bd3b509bed52f",
+      "selected_configuration_sha256": "2c214f8816403a9da30e080c08405c99549d6c84b614b9be60cc04ac0be3a08a"
+    },
+    "chronological_split__timestamp_free_six": {
+      "candidate": 8,
+      "params": {
+        "hidden_dims": [
+          512,
+          256,
+          128
+        ],
+        "dropout": 0.0,
+        "learning_rate": 0.003
+      },
+      "features": [
+        "duration",
+        "peak_frequency",
+        "central_freq",
+        "amplitude",
+        "snr",
+        "q_value"
+      ],
+      "seed42_model_sha256": "b3a69918dc61960e30d729e58dc2cb628db66009e8e2a75f80afe85f731900e9",
+      "scaler_sha256": "9494f5f55095ae8a1aec2769f8b2041719b0c8125d4d47753f2d4194a96a1fd3",
+      "selected_configuration_sha256": "29730eb265893bb1216e5d0abee2711b74b315264b923387eea09306148b7174"
+    }
+  },
+  "versions": {
+    "python": "3.12.9",
+    "torch": "2.6.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1"
+  },
+  "epochs": 20,
+  "training_scope": "outer training only; no validation refit",
+  "test_used_for_selection": false,
+  "metrics": [
+    "weighted_f1",
+    "macro_f1_all24",
+    "macro_f1_supported",
+    "accuracy"
+  ],
+  "aggregation": "arithmetic mean and sample SD ddof=1; not a confidence interval"
+}

@@ -1,0 +1,13 @@
+\begin{table*}[t]
+\centering
+\caption{Operational performance and architecture-specific structural descriptors for the three revised pipelines under the grouped-random, nine-feature condition. Values are the mean $\pm$ sample standard deviation across three training seeds. Seed-level latency is the median of repeated CPU measurements. Serialized bundle size and latency are directly measured operational quantities; tree structure and neural-network parameter counts are not treated as equivalent measures of model capacity.}
+\label{tab:operational_complexity}
+\begin{tabular}{lccccc}
+Model & Weighted F1 & Bundle size (MiB) & Single-event latency (ms) & Batch throughput (events s$^{-1}$) & Family-specific structure \\
+\hline
+XGBoost & 0.8297 $\pm$ 0.0002 & 31.107 $\pm$ 0.096 & 0.304 $\pm$ 0.009 & 16,130 $\pm$ 224 & 200 rounds; 4,800 trees; 435,664 leaves \\
+MLP & 0.8254 $\pm$ 0.0033 & 0.6633 $\pm$ $<0.0001$ & 0.100 $\pm$ 0.001 & 160,997 $\pm$ 2,827 & 172,440 parameters \\
+FT-Transformer & 0.7946 $\pm$ 0.0059 & 0.5120 $\pm$ $<0.0001$ & 0.759 $\pm$ 0.061 & 7,653 $\pm$ 764 & 127,868 parameters \\
+\hline
+\end{tabular}
+\end{table*}

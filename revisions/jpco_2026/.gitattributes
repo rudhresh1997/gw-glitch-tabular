@@ -1,0 +1,3 @@
+# Preserve byte-identical provenance artifacts with known whitespace.
+evidence/manuscript_evidence_v1/manuscript_numerical_evidence.md -whitespace
+make_operational_complexity_figure.py -whitespace
