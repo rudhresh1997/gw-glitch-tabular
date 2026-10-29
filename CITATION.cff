@@ -1,23 +1,20 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite it using the metadata below."
+message: "If you use this software, please cite the preferred article below."
 title: "gw-glitch-tabular"
 type: software
 authors:
   - family-names: "Manoharan"
     given-names: "Rudhresh"
-    email: "manorudhresh@gmail.com"
 repository-code: "https://github.com/rudhresh1997/gw-glitch-tabular"
 url: "https://github.com/rudhresh1997/gw-glitch-tabular"
 abstract: >
-  Code and reproducibility materials for the paper
-  "Evaluating Machine-Learning Models for Multiclass Classification of
-  LIGO Gravitational-Wave Glitches." The repository contains model
-  scripts, lightweight numerical evidence, figure assets, and
-  documentation for the original benchmark and its 2026
-  referee-driven revision.
+  Code and reproducibility materials for the article
+  "Evaluating Machine-Learning Models for Multiclass Classification of LIGO Gravitational-Wave Glitches." The repository contains model scripts,
+  lightweight numerical evidence, figure assets, and documentation
+  for the original benchmark and its 2026 referee-driven revision.
 license: "MIT"
-version: "v1.0.0"
-date-released: 2026-04-08
+version: "v1.1.0"
+date-released: 2026-10-29
 keywords:
   - gravitational waves
   - glitch classification
@@ -27,4 +24,15 @@ keywords:
   - interpretability
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.19475319"
+    value: "10.5281/zenodo.19475318"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Manoharan"
+      given-names: "Rudhresh"
+    - family-names: "Cleaver"
+      given-names: "Gerald B."
+  title: "Evaluating Machine-Learning Models for Multiclass Classification of LIGO Gravitational-Wave Glitches"
+  journal: "Journal of Physics Communications"
+  year: 2026
+  doi: "10.1088/2399-6528/aeb8df"

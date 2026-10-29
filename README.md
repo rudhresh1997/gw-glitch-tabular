@@ -5,8 +5,8 @@ Code and reproducibility materials for:
 **Evaluating Machine-Learning Models for Multiclass Classification of
 LIGO Gravitational-Wave Glitches**
 
-Zenodo DOI:
-https://doi.org/10.5281/zenodo.19475319
+Zenodo concept DOI (all software versions):
+[https://doi.org/10.5281/zenodo.19475318](https://doi.org/10.5281/zenodo.19475318)
 
 ## Overview
 
@@ -134,5 +134,7 @@ The final Version of Record may not yet be available.
 
 ## Citation
 
-If you use this repository, cite the archived software release using the
-Zenodo DOI above. Citation metadata are provided in `CITATION.cff`.
+For scientific use, cite the associated Journal of Physics Communications
+article identified in `CITATION.cff`. The Zenodo concept DOI above
+resolves to the latest archived software release; individual releases
+also receive version-specific DOIs.
