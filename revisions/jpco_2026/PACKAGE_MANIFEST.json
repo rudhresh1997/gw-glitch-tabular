@@ -43,9 +43,9 @@
       "sha256": "f09b49831d3e7e33fdbcd0ed3854cb534a71231806385be9c85d171be141f516"
     },
     {
-      "bytes": 7214,
+      "bytes": 7455,
       "path": "README.md",
-      "sha256": "f2b404825471860e7c63d4cf81a7c065b00dacfb9f0c5e92a7777f3d6ebbd5aa"
+      "sha256": "eee862edaeb7e1cd74b771abbabcd4e2cc97640ff12071134b9bd11cb317878c"
     },
     {
       "bytes": 2306,
@@ -631,5 +631,5 @@
   "manifest_excludes_itself": true,
   "package": "jpco_2026_revision_reproducibility",
   "schema_version": "1.0",
-  "total_bytes": 2790481
+  "total_bytes": 2790722
 }

@@ -13,6 +13,11 @@ https://doi.org/10.1088/2399-6528/aeb8df
 
 The final Version of Record may not yet be available.
 
+The software archive uses the stable Zenodo concept DOI
+[10.5281/zenodo.19475318](https://doi.org/10.5281/zenodo.19475318),
+which resolves to the latest archived release. Version-specific Zenodo
+DOIs identify immutable individual releases.
+
 ## Scope
 
 The package documents the additional analyses performed during revision:

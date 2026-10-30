@@ -1,0 +1,33 @@
+{
+  "title": "Evaluating Machine-Learning Models for Multiclass Classification of LIGO Gravitational-Wave Glitches (Code and Reproducibility Package)",
+  "description": "Code, configurations, lightweight numerical evidence, figure assets, and documentation supporting the original benchmark and the 2026 referee-driven revision. Version v1.1.0 adds the curated revision reproducibility package, including duplicate-aware split provenance, chronological generalization analyses, targeted ablations, common-method permutation importance, operational measurements, bandwidth augmentation, and feature-provenance and image-comparison audits. Large event-level datasets, trained models, predictions, checkpoints, and execution logs are not included.",
+  "creators": [
+    {
+      "name": "Manoharan, Rudhresh",
+      "affiliation": "Baylor University"
+    }
+  ],
+  "version": "v1.1.0",
+  "publication_date": "2026-10-29",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "keywords": [
+    "gravitational waves",
+    "glitch classification",
+    "machine learning",
+    "deep learning",
+    "tabular data",
+    "interpretability",
+    "temporal generalization",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1088/2399-6528/aeb8df",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    }
+  ]
+}
